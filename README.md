@@ -4,9 +4,9 @@ A polished frontend-only prototype of an AI interface combining the best feature
 
 ## 🚀 Live Demo
 
-**Live URL:** [Add your Vercel/Netlify URL here after deployment]
+**Live URL:** https://assessment-3bff.vercel.app/
 
-Example: `https://your-project.vercel.app`
+
 
 ## 📋 Table of Contents
 
@@ -81,7 +81,6 @@ Based on the research above, I've selected **6 core features** to combine into t
 - Dark Mode: Dark slate background with proper contrast
 - Mobile View: Responsive single-column layout
 
-*Note: Add Figma/XD link or screenshots here if available*
 
 **Design Principles:**
 - **Clean & Minimal**: Focus on content with generous whitespace
@@ -389,7 +388,7 @@ This project is created for assessment purposes.
 
 ## 👤 Author
 
-[Your Name]
+Deepak Kumar
 
 ---
 
