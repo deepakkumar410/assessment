@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useState, ReactNode } from "react";
+import { createContext, useContext, useState, ReactNode, Dispatch, SetStateAction } from "react";
 
 interface Parameters {
   temperature: number;
@@ -16,7 +16,7 @@ interface FormContextType {
   selectedModel: string;
   setSelectedModel: (model: string) => void;
   parameters: Parameters;
-  setParameters: (params: Parameters) => void;
+  setParameters: Dispatch<SetStateAction<Parameters>>;
 }
 
 const FormContext = createContext<FormContextType | undefined>(undefined);

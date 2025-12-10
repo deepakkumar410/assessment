@@ -17,26 +17,27 @@ export function ModelSelector() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetchModels();
-  }, []);
-
-  const fetchModels = async () => {
-    try {
-      setLoading(true);
-      const response = await fetch("/api/models");
-      if (!response.ok) throw new Error("Failed to fetch models");
-      const data = await response.json();
-      setModels(data);
-      if (data.length > 0) {
-        setSelectedModel(data[0].id);
+    const fetchModels = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch("/api/models");
+        if (!response.ok) throw new Error("Failed to fetch models");
+        const data = await response.json();
+        setModels(data);
+        if (data.length > 0) {
+          setSelectedModel(data[0].id);
+        }
+        setError(null);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : "An error occurred");
+      } finally {
+        setLoading(false);
       }
-      setError(null);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "An error occurred");
-    } finally {
-      setLoading(false);
-    }
-  };
+    };
+    
+    fetchModels();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   if (loading) {
     return (
