@@ -4,7 +4,7 @@ A polished frontend-only prototype of an AI interface combining the best feature
 
 ## 🚀 Live Demo
 
-**Live URL:** https://assessment-dpk.vercel.app/
+**Live URL:** https://assesment-ochre.vercel.app/
 
 
 
